@@ -20,7 +20,7 @@ class Empleado : public Persona {
         void setCargo(char cargo[]);
         void setHorasTrabajadas(int horasTrabajadas);
         void setSueldo(float sueldo);
-        void setEstado(bool estado);
+        void setEstado(bool e){estado=e;};
         int getCodEmpleado();
         char* getCargo();
         int getHorasTrabajadas();
