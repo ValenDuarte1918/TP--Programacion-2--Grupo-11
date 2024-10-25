@@ -1,5 +1,7 @@
 #ifndef CLSPERSONA_H_INCLUDED
 #define CLSPERSONA_H_INCLUDED
+#include "clsFecha.cpp"
+
 
 #include <iostream>
 #include <cstring>
@@ -9,12 +11,15 @@ class Persona {
         char nombre[50];
         char apellido[50];
         int dni;
+        Fecha fechaNacimiento;
+
     public:
         Persona();
         Persona(char nombre[], char apellido[], int dni);
         void setNombre(char nombre[]);
         void setApellido(char apellido[]);
         void setDni(int dni);
+        void setFechaNacimiento(Fecha fechaNacimiento);
         char* getNombre();
         char* getApellido();
         int getDni();
@@ -33,6 +38,7 @@ void Persona::cargar() {
     std::cout << "Ingrese dni: ";
     std::cin >> dni;
     std::cin.ignore(); // Para ignorar el salto de línea que queda en el buffer
+    fechaNacimiento.cargarFecha();
 }
 
 void Persona::mostrar() {
