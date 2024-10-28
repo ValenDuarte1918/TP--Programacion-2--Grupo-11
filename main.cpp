@@ -1,13 +1,11 @@
 #include <iostream>
 #include <cstring>
 
-#include "clsPersona.cpp"
-#include "clsEmpleado.cpp"
-#include "clsProveedor.cpp"
-#include "archivoPersona.h"
-#include "archivoEmpleado.h"
-#include "archivoProveedor.h"
-#include "funcionesPersona.h"
+
+#include "./archivos/archivoEmpleado.h"
+#include "./archivos/archivoPersona.h"
+#include "./archivos/archivoProveedor.h"
+#include "./funciones/funcionesPersona.h"
 #include "menuPersona.h"
 
 
@@ -39,5 +37,3 @@ int main (){
     
     }
 }
-
-

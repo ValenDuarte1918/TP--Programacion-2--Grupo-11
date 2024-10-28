@@ -2,7 +2,7 @@
 #define MENUPERSONA_H_INCLUDED
 #include <iostream>
 #include <cstring>
-#include "funcionesPersona.h"
+#include "./funciones/funcionesPersona.h"
 
 using namespace std;
 

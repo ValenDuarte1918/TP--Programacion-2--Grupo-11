@@ -2,7 +2,7 @@
 #define ARCHIVOEMPLEADO_H_INCLUDED
 #include <iostream>
 #include <cstring>
-#include "./clsEmpleado.cpp"
+#include "../clases/clsEmpleado.cpp"
 
 using namespace std;
 

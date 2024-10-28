@@ -2,7 +2,7 @@
 #define ARCHIVOPROVEEDOR_H_INCLUDED
 #include <iostream>
 #include <cstring>
-#include "./clsProveedor.cpp"
+#include "../clases/clsProveedor.cpp"
 
 using namespace std;
 
