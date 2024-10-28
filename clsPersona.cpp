@@ -6,45 +6,48 @@
 #include <iostream>
 #include <cstring>
 
+using namespace std;
+
 class Persona {
     private: 
         char nombre[50];
         char apellido[50];
         int dni;
         Fecha fechaNacimiento;
+        bool estado;
 
     public:
-        Persona();
-        Persona(char nombre[], char apellido[], int dni);
-        void setNombre(char nombre[]);
-        void setApellido(char apellido[]);
-        void setDni(int dni);
-        void setFechaNacimiento(Fecha fechaNacimiento);
-        char* getNombre();
-        char* getApellido();
-        int getDni();
-        void mostrarDatos();
-        ~Persona();
+        Persona(){estado = true;}
+        void setDni(int d){dni=d;};
+        void setEstado(bool e){estado = e;};
+        void setFechaNacimiento(Fecha f){fechaNacimiento = f;};
+        int getDni(){return dni;};
+        bool getEstado(){return estado;};
+       
         void cargar();
         void mostrar();
 };
 
 // Implementación de los métodos
 void Persona::cargar() {
-    std::cout << "Ingrese nombre: ";
-    std::cin.getline(nombre, 50);
-    std::cout << "Ingrese apellido: ";
-    std::cin.getline(apellido, 50);
-    std::cout << "Ingrese dni: ";
-    std::cin >> dni;
-    std::cin.ignore(); // Para ignorar el salto de línea que queda en el buffer
+    cout << "Ingrese nombre: ";
+    cin >> nombre;
+    cout << "Ingrese apellido: ";
+    cin >> apellido;
+    cout << "Ingrese DNI: ";
+    cin >> dni;
     fechaNacimiento.cargarFecha();
 }
 
 void Persona::mostrar() {
-    std::cout << "Nombre: " << nombre << std::endl;
-    std::cout << "Apellido: " << apellido << std::endl;
-    std::cout << "Dni: " << dni << std::endl;
+    if  (estado == true){   
+    cout << "Nombre: " << nombre << endl;
+    cout << "Apellido: " << apellido << endl;
+    cout << "DNI: " << dni << endl;
+    cout << "Fecha de nacimiento: ";
+    fechaNacimiento.mostrarFecha();
+    cout << endl;
+    }
 }
 
 #endif // CLSPERSONA_H_INCLUDED

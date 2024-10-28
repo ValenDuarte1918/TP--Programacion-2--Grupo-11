@@ -14,20 +14,18 @@ class Empleado : public Persona {
         float sueldo;
         bool estado;
     public:
-        Empleado();
-        Empleado(char nombre[], char apellido[], int dni, int codEmpleado, char cargo[], int horasTrabajadas, float sueldo, bool estado);
-        void setCodEmpleado(int codEmpleado);
-        void setCargo(char cargo[]);
-        void setHorasTrabajadas(int horasTrabajadas);
-        void setSueldo(float sueldo);
+        Empleado(){estado = false;};
+        void setCodEmpleado(int codEmpleado){codEmpleado = codEmpleado;};
+        void setCargo(char cargo[]){cargo = cargo;};
+        void setHorasTrabajadas(int horasTrabajadas){horasTrabajadas = horasTrabajadas;};
+        void setSueldo(float sueldo){sueldo = sueldo;};
         void setEstado(bool e){estado=e;};
-        int getCodEmpleado();
-        char* getCargo();
-        int getHorasTrabajadas();
-        float getSueldo();
-        bool getEstado();
-        void mostrarDatos();
-        ~Empleado();
+        int getCodEmpleado(){return codEmpleado;};
+        char* getCargo(){return cargo;};
+        int getHorasTrabajadas(){return horasTrabajadas;};
+        float getSueldo(){return sueldo;};
+        bool getEstado(){return estado;};
+        
         void cargar();
         void mostrar();
 };

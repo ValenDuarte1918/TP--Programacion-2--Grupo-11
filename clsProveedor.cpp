@@ -13,20 +13,18 @@ class Proveedor{
         int telefono;
         bool estado;
     public:
-        Proveedor();
-        Proveedor(int codProveedor, char razonSocial[], char direccion[], char telefono[], bool estado);
-        void setCodProveedor(int codProveedor);
-        void setRazonSocial(char razonSocial[]);
-        void setDireccion(char direccion[]);
-        void setTelefono(int telefono);
-        void setEstado(bool estado);
-        int getCodProveedor();
-        char* getRazonSocial();
-        char* getDireccion();
-        char* getTelefono();
-        bool getEstado();
-        void mostrarDatos();
-        ~Proveedor();
+        Proveedor(){estado = false;};
+        void setCodProveedor(int codProveedor){codProveedor = codProveedor;};
+        void setRazonSocial(char razonSocial[]){razonSocial = razonSocial;};
+        void setDireccion(char direccion[]){direccion = direccion;};
+        void setTelefono(int telefono){telefono = telefono;};
+        void setEstado(bool estado){estado = estado;};
+        int getCodProveedor(){return codProveedor;};
+        char* getRazonSocial(){return razonSocial;};
+        char* getDireccion(){return direccion;};
+        int getTelefono(){return telefono;};
+        bool getEstado(){return estado;};
+
         void cargar();
         void mostrar();
 };
