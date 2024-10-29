@@ -2,7 +2,7 @@
 #define MENUEMPLEADO_H_INCLUDED
 #include <iostream>
 #include <cstring>
-#include "funcionesEmpleado.h"
+#include "./funciones/funcionesEmpleado.h"
 
 using namespace std;
 
@@ -10,31 +10,31 @@ void menuEmpleado(){
     while (true) {
         int opc;
         system("cls");
-        cout << "Menú de personas" << endl;
-        cout << "1. Cargar persona" << endl;
-        cout << "2. Baja persona" << endl;
-        cout << "3. Modificar persona" << endl;
-        cout << "4. Listar personas" << endl;
-        cout << "5. Limpiar archivo" << endl;
+        cout << "Menu de Empleados" << endl;
+        cout << "1. Cargar Empleado" << endl;
+        cout << "2. Baja Empleado" << endl;
+        cout << "3. Modificar Empleado" << endl;
+        cout << "4. Listar Empleados" << endl;
+        cout << "5. Limpiar Empleados" << endl;
         cout << "0. Salir" << endl;
         cout << "Ingrese una opción: ";
         cin >> opc;
         system("cls");
         switch (opc) {
             case 1:
-                altaRegistro();
+                altaEmpleado();
                 break;
             case 2:
-                bajaRegistro();
+                bajaEmpleado();
                 break;
             case 3:
-                modificarRegistro();
+                modificarEmpleado();
                 break;
             case 4:
-                listarRegistros();
+                listarEmpleado();
                 break;
             case 5:
-                limpiarArchivo();
+                limpiarEmpleado();
                 break;
             case 0:
                 return;

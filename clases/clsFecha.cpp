@@ -51,7 +51,7 @@ bool Fecha::esBisiesto() {
 }
 
 void Fecha::cargarFecha() {
-    cout << "Ingrese día: ";
+    cout << "Ingrese dia: ";
     cin >> dia;
     cout << "Ingrese mes: ";
     cin >> mes;
@@ -60,7 +60,7 @@ void Fecha::cargarFecha() {
 }
 
 void Fecha::mostrarFecha() {
-    cout << "Fecha: " << dia << "/" << mes << "/" << anio << endl;
+    cout << dia << "/" << mes << "/" << anio << endl;
 }
 
 #endif // CLSFECHA_H_INCLUDED

@@ -7,6 +7,7 @@
 
 using namespace std;
 
+
 // Metodo para listar todos los registros
 void listarRegistros(){
     archivoPersona obj1; // Crea un objeto de archivoPersona
@@ -98,5 +99,6 @@ void limpiarArchivo(){
     obj1.limpiarArchivo(); // Llama al metodo limpiarArchivo del objeto
     cout << "Archivo limpiado" << endl;
 }
+
 
 #endif // FUNCIONESPERSONA_H_INCLUDED

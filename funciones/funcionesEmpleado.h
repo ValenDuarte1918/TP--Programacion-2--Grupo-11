@@ -2,91 +2,146 @@
 #define FUNCIONESEMPLEADO_H_INCLUDED
 #include <iostream>
 #include <cstring>
-#include "archivoEmpleado.h"
+#include <cstdio>
+#include "../archivos/archivoEmpleado.h"
 
 
 using namespace std;
 
-void listarRegistros(){
+    
+
+// Función para listar todos los empleados
+void listarEmpleado() {
     archivoEmpleado obj1;
-    obj1.listarRegistros();
+    obj1.listarRegistros(); // Llama a la función para listar todos los registros de empleados
 }
 
-void modificarRegistro(){
-    archivoEmpleado obj1 ("empleado.dat");
+// Función para modificar un empleado existente
+void modificarEmpleado() {
+    archivoEmpleado obj1("empleado.dat");
     int num;
-    cout << "Ingrese el numero de registro a modificar: ";
+
+    // Solicita el código del empleado a modificar
+    cout << "Ingrese el codigo a modificar: ";
     cin >> num;
-    int pos= obj1.buscarRegistro(num);
-    if(pos<0){
-        cout << "Registro no encontrado" << endl;
+
+    // Busca el registro del empleado por el código especificado
+    int pos = obj1.buscarRegistro(num);
+    if (pos < 0) {
+        cout << "Codigo no encontrado" << endl; // Mensaje si el código no se encuentra
         return;
     }
 
-Empleado obj;
-obj= obj1.leerRegistro(pos);
- char cat[50];
-cout << "Ingrese la nueva categoria: ";
-cin >> cat;
-obj.setNombre(cat);
-obj1.modificarRegistro(obj, pos);
+    // Lee el registro del empleado en la posición especificada
+    Empleado obj;
+    obj = obj1.leerRegistro(pos);
 
+    // Solicita el nuevo código del empleado
+    int codEmp;
+    cout << "Ingrese el nuevo codigo de empleado: ";
+    cin >> codEmp;
+
+    // Establece el nuevo código del empleado
+    obj.setCodEmpleado(codEmp);
+
+    // Modifica el registro del empleado en la posición especificada
+    obj1.modificarRegistro(obj, pos);
+
+    // Verifica si el estado del empleado es falso (no modificado)
+    if (obj.getEstado() == false) {
+        cout << "No se pudo modificar el registro" << endl; // Mensaje si no se pudo modificar el registro
+    } else {
+        cout << "Registro modificado exitosamente" << endl; // Mensaje si el registro se modificó exitosamente
+    }
 }
 
-void bajaRegistro(){
+// Función para dar de baja a un empleado
+void bajaEmpleado() {
     archivoEmpleado obj1;
     int num;
-    cout << "Ingrese el numero de registro a eliminar: ";
+
+    // Solicita el número de registro a eliminar
+    cout << "Ingrese el numero de Empleado a eliminar: ";
     cin >> num;
-    int pos= obj1.buscarRegistro(num);
-    if(pos<0){
-        cout << "Registro no encontrado" << endl;
+
+    // Busca el registro del empleado por el número especificado
+    int pos = obj1.buscarRegistro(num);
+    if (pos < 0) {
+        cout << "Empleado no encontrado" << endl; 
         return;
     }
-Empleado obj;
-obj= obj1.leerRegistro(pos);
-obj.setEstado(false);
-obj1.modificarRegistro(obj, pos);
 
+    // Lee el registro del empleado en la posición especificada
+    Empleado obj;
+    obj = obj1.leerRegistro(pos);
+
+    // Establece el estado del empleado a falso (eliminado)
+    obj.setEstado(false);
+
+    // Modifica el registro del empleado en la posición especificada
+    obj1.modificarRegistro(obj, pos);
+
+    cout << "Empleado eliminado" << endl; // Mensaje si el registro se eliminó
 }
 
-void altaRegistro(){
+// Función para dar de alta a un nuevo empleado
+void altaEmpleado() {
     archivoEmpleado obj1("empleado.dat");
     Empleado obj;
+
+    // Carga los datos del nuevo empleado
     obj.cargar();
-    int pos= obj1.buscarRegistro(obj.getCodEmpleado());
-    if(pos>=0){
-        cout << "Ese DNI ya existe" << endl;
+
+    // Verifica si el código del empleado ya existe
+    int pos = obj1.buscarRegistro(obj.getCodEmpleado());
+    if (pos != -1) {
+        cout << "Ese Codigo de empleado ya existe" << endl; // Mensaje si el código de empleado ya existe
         obj.setEstado(false);
     }
-    if (obj.getEstado()==true){
+
+    // Si el estado del empleado es verdadero (nuevo), graba el registro
+    if (obj.getEstado() == true) {
         obj1.grabarRegistro(obj);
-    }else{
-        cout << "No se pudo grabar el registro" << endl;
+    } else {
+        cout << "No se pudo grabar el registro" << endl; // Mensaje si no se pudo grabar el registro
     }
 }
 
-void buscarRegistro(){
+// Función para buscar un empleado por su número
+void buscarEmpleado() {
     int num;
-    cout << "Ingrese el numero de registro a buscar: ";
+
+    // Solicita el número de empleado a buscar
+    cout << "Ingrese el numero de empleado a buscar: ";
     cin >> num;
+
     archivoEmpleado obj1;
     Empleado obj;
-    int pos= obj1.buscarRegistro(num);
-    if(pos<0){
-        cout << "Registro no encontrado" << endl;
+
+    // Busca el registro del empleado por el número especificado
+    int pos = obj1.buscarRegistro(num);
+    if (pos < 0) {
+        cout << "Empleado no encontrado" << endl; // Mensaje si el registro no se encuentra
         return;
     }
-    obj= obj1.leerRegistro(pos);
+
+    // Lee el registro del empleado en la posición especificada
+    obj = obj1.leerRegistro(pos);
+
+    // Limpia la pantalla y muestra los datos del empleado
     system("cls");
     obj.mostrar();
 }
 
-void limpiarArchivo(){
+// Función para limpiar el archivo de empleados
+void limpiarEmpleado() {
     archivoEmpleado obj1;
+
+    // Llama a la función para limpiar el archivo de empleados
     obj1.limpiarArchivo();
-    cout << "Archivo borrado" << endl;
+
+    cout << "Archivo de empleados borrado" << endl; // Mensaje si el archivo se borró
 }
 
-#endif // FUNCIONES_H_INCLUDED
+#endif // FUNCIONESEMPLEADO_H_INCLUDED
 
