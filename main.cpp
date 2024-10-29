@@ -6,8 +6,11 @@
 #include "./archivos/archivoPersona.h"
 #include "./archivos/archivoProveedor.h"
 #include "./funciones/funcionesPersona.h"
+#include "./funciones/funcionesEmpleado.h"
+#include "./funciones/funcionesProveedor.h"
 #include "menuPersona.h"
 #include "menuEmpleado.h"
+#include "menuProveedor.h"
 
 
 
@@ -20,6 +23,8 @@ int main (){
         system("cls");
         cout << "1-Menu de personas" << endl;
         cout << "2-Menu de empleados" << endl;
+        cout << "3-Menu de proveedores" << endl;
+
         cin >> opc;
         system("cls");
         switch (opc) {
@@ -29,7 +34,8 @@ int main (){
             case 2:
                 menuEmpleado();
                 break;
-            case 0:
+            case 3:
+                menuProveedor();
                 return 0;
             default:
                 cout << "Opcion incorrecta" << endl;

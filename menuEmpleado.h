@@ -45,4 +45,4 @@ void menuEmpleado(){
         system("pause");
     }
 }
-#endif // MENUPROVEEDOR_H_INCLUDED
+#endif // MENUEMPLEADO_H_INCLUDED

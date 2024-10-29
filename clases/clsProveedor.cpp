@@ -1,55 +1,69 @@
-#ifndef CLSPROVEEDOR_H_INCLUDED
-#define CLSPROVEEDOR_H_INCLUDED
 #include <iostream>
 #include <cstring>
+#include "clsPersona.cpp"
 
 using namespace std;
 
-class Proveedor{
+// Clase Proveedor que hereda de Persona
+class Proveedor: public Persona {
     private:
+        char nombre[50];
+        char apellido[50];
         int codProveedor;
         char razonSocial[50];
         char direccion[50];
         int telefono;
         bool estado;
     public:
-        Proveedor(){estado = false;};
-        void setCodProveedor(int codProveedor){codProveedor = codProveedor;};
-        void setRazonSocial(char razonSocial[]){razonSocial = razonSocial;};
-        void setDireccion(char direccion[]){direccion = direccion;};
-        void setTelefono(int telefono){telefono = telefono;};
-        void setEstado(bool estado){estado = estado;};
+        // Constructor que inicializa el estado a true
+        Proveedor(){estado = true;};
+
+        // Métodos setters
+        void setCodProveedor(int codProv){codProveedor = codProv;};
+        void setRazonSocial(char razonSoc[]){ char *razonSocial = razonSoc;};
+        void setDireccion(char direc[]){char*direccion = direc;};
+        void setTelefono(int t){telefono = t;};
+        void setEstado(bool e){estado = e;};
+
+        // Métodos getters
         int getCodProveedor(){return codProveedor;};
         char* getRazonSocial(){return razonSocial;};
         char* getDireccion(){return direccion;};
         int getTelefono(){return telefono;};
         bool getEstado(){return estado;};
 
+        // Métodos para cargar y mostrar datos
         void cargar();
         void mostrar();
 };
 
-// Implementación de los métodos
+// Implementación del método cargar
 void Proveedor::cargar() {
-    cout << "Ingrese código de proveedor: ";
+    cout << "Ingrese nombre: ";
+    setNombre(nombre); // Llama al método de la clase base para establecer el nombre
+    cin >> nombre;
+    cout << "Ingrese su apellido: ";
+    setApellido(apellido); // Llama al método de la clase base para establecer el apellido
+    cin >> apellido;
+
+    cout << "Ingrese codigo de proveedor: ";
     cin >> codProveedor;
     cin.ignore();
-    cout << "Ingrese razón social: ";
+    cout << "Ingrese razon social: ";
     cin.getline(razonSocial, 50);
-    cout << "Ingrese dirección: ";
+    cout << "Ingrese direccion: ";
     cin.getline(direccion, 50);
-    cout << "Ingrese teléfono: ";
+    cout << "Ingrese telefono: ";
     cin >> telefono;
     cout << "Ingrese estado (1: activo, 0: inactivo): ";
     cin >> estado;
     cin.ignore();
 };
-void Proveedor::mostrar() {
-    cout << "Código de proveedor: " << codProveedor << endl;
-    cout << "Razón social: " << razonSocial << endl;
-    cout << "Dirección: " << direccion << endl;
-    cout << "Teléfono: " << telefono << endl;
-    cout << "Estado: " << (estado ? "Activo" : "Inactivo") << endl;
-};
 
-#endif // CLSPROVEEDOR_H_INCLUDED
+// Implementación del método mostrar
+void Proveedor::mostrar() {
+    cout << "Codigo de proveedor: " << codProveedor << endl;
+    cout << "Razon social: " << razonSocial << endl;
+    cout << "Direccion: " << direccion << endl;
+    cout << "Telefono: " << telefono << endl;
+};

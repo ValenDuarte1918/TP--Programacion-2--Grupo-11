@@ -1,40 +1,40 @@
-#ifndef MENUPERSONA_H_INCLUDED
-#define MENUPERSONA_H_INCLUDED
+#ifndef MENUPROVEEDOR_H_INCLUDED
+#define MENUPROVEEDOR_H_INCLUDED
 #include <iostream>
 #include <cstring>
-#include "./funciones/funcionesPersona.h"
+#include "./funciones/funcionesProveedor.h"
 
 using namespace std;
 
-void menuPersona(){
+void menuProveedor(){
     while (true) {
         int opc;
         system("cls");
-        cout << "Menu de personas" << endl;
-        cout << "1. Cargar persona" << endl;
-        cout << "2. Baja persona" << endl;
-        cout << "3. Modificar persona" << endl;
-        cout << "4. Listar personas" << endl;
+        cout << "Menu de Proveedores" << endl;
+        cout << "1. Cargar proveedor" << endl;
+        cout << "2. Baja proveedor" << endl;
+        cout << "3. Modificar proveedor" << endl;
+        cout << "4. Listar proveedor" << endl;
         cout << "5. Limpiar archivo" << endl;
         cout << "0. Salir" << endl;
-        cout << "Ingrese una opción: ";
+        cout << "Ingrese una opcion: ";
         cin >> opc;
         system("cls");
         switch (opc) {
             case 1:
-                altaRegistro();
+                altaProveedor();
                 break;
             case 2:
-                bajaRegistro();
+                bajaProveedor();
                 break;
             case 3:
-                modificarRegistro();
+                modificarProveedor();
                 break;
             case 4:
-                listarRegistros();
+                listarProveedor();
                 break;
             case 5:
-                limpiarArchivo();
+                limpiarProveedor();
                 break;
             case 0:
                 return;
@@ -45,4 +45,4 @@ void menuPersona(){
         system("pause");
     }
 }
-#endif // MENUPERSONA_H_INCLUDED
+#endif // MENUPROVEEDOR_H_INCLUDED
