@@ -20,8 +20,8 @@ class Proveedor: public Persona {
 
         // Métodos setters
         void setCodProveedor(int codProv){codProveedor = codProv;};
-        void setRazonSocial(char razonSoc[]){ char *razonSocial = razonSoc;};
-        void setDireccion(char direc[]){char*direccion = direc;};
+        void setRazonSocial(char razon[]) { strcpy(this->razonSocial, razon); }
+        void setDireccion(char dir[]) { strcpy(this->direccion, dir); }
         void setTelefono(int t){telefono = t;};
         void setEstado(bool e){estado = e;};
 
