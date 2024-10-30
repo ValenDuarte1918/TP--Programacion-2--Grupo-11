@@ -143,5 +143,22 @@ void limpiarEmpleado() {
     cout << "Archivo de empleados borrado" << endl; // Mensaje si el archivo se borró
 }
 
+void buscarEmpleadoPorCargo(){
+    archivoEmpleado obj1;
+    Empleado obj;
+    char cargo[50];
+    cout << "Ingrese el cargo a buscar:  Cocinero || Ayudante de cocina || Cajero" << endl;
+    cin.ignore();
+    cin.getline(cargo, 50);
+    int cant = obj1.contarRegistros();
+    for (int i = 0; i < cant; i++) {
+        obj = obj1.leerRegistro(i);
+        if (strcmp(obj.getCargo(), cargo) == 0 && obj.getEstado() == true) {
+            obj.mostrar();
+        }else{
+            cout << "No se encontro ningun empleado con ese cargo" << endl;
+        }
+    }
+}
 #endif // FUNCIONESEMPLEADO_H_INCLUDED
 

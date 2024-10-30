@@ -41,8 +41,5 @@ int main (){
                 cout << "Opcion incorrecta" << endl;
                 break;
         }
-
-    
-    
     }
 }

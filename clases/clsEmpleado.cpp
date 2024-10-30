@@ -30,6 +30,7 @@ class Empleado : public Persona {
         int getHorasTrabajadas() { return horasTrabajadas; };
         float getSueldo() { return sueldo; };
         bool getEstado() { return estado; };
+        char *getCargo() { return cargo; };
 
         // Declaración de los métodos cargar y mostrar
         void cargar();
@@ -45,8 +46,28 @@ void Empleado::cargar() {
     cin >> codEmpleado;
     cin.ignore(); 
 
-    cout << "Ingrese cargo: ";
-    cin.getline(cargo, 50);
+  // Lista de cargos predefinidos
+    const char* cargos[] = {"Cocinero", "Ayudante de cocina", "Cajero"};
+    int numCargos = sizeof(cargos) / sizeof(cargos[0]);
+
+    // Mostrar opciones de cargos
+    cout << "Seleccione el cargo:\n";
+    for (int i = 0; i < numCargos; ++i) {
+        cout << i + 1 << ". " << cargos[i] << endl;
+    }
+
+    int opcion;
+    cout << "Ingrese el numero del cargo: ";
+    cin >> opcion;
+    cin.ignore();
+
+    // Validar la opción ingresada
+    if (opcion < 1 || opcion > numCargos) {
+        cout << "Opción inválida. Cargo no asignado." << endl;
+        strcpy(cargo, "Sin asignar");
+    } else {
+        strcpy(cargo, cargos[opcion - 1]);
+    }
 
     cout << "Ingrese horas trabajadas: ";
     cin >> horasTrabajadas;

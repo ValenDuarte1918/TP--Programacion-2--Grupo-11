@@ -15,7 +15,8 @@ void menuEmpleado(){
         cout << "2. Baja Empleado" << endl;
         cout << "3. Modificar Empleado" << endl;
         cout << "4. Listar Empleados" << endl;
-        cout << "5. Limpiar Empleados" << endl;
+        cout << "5. Buscar Empleado por Cargo" << endl;
+        cout << "6. Limpiar Empleados" << endl;
         cout << "0. Salir" << endl;
         cout << "Ingrese una opción: ";
         cin >> opc;
@@ -34,6 +35,9 @@ void menuEmpleado(){
                 listarEmpleado();
                 break;
             case 5:
+                buscarEmpleadoPorCargo();
+                break;
+            case 6:
                 limpiarEmpleado();
                 break;
             case 0:
