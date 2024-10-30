@@ -24,6 +24,8 @@ int main (){
         cout << "1-Menu de personas" << endl;
         cout << "2-Menu de empleados" << endl;
         cout << "3-Menu de proveedores" << endl;
+        cout << "0-Salir" << endl;
+        cout << "Ingrese una opcion: ";
 
         cin >> opc;
         system("cls");

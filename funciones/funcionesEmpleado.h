@@ -160,5 +160,6 @@ void buscarEmpleadoPorCargo(){
         }
     }
 }
+
 #endif // FUNCIONESEMPLEADO_H_INCLUDED
 

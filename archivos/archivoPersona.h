@@ -68,6 +68,7 @@ void archivoPersona::listarRegistros() {
         } else {
             cout << "Estado: Inactivo" << endl;
         }
+        cout << "<----------------------------------->" << endl;
     }
 }
 

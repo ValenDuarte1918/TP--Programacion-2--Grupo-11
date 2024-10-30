@@ -89,8 +89,6 @@ void Empleado::mostrar() {
     cout << "Horas trabajadas: " << horasTrabajadas << endl;
 
     cout << "Sueldo: " << sueldo << endl;
-
-    cout << "Estado: " <<  (estado ? "Activo" : "Inactivo") << endl;
 }
 
 #endif // CLSEMPLADO_H_INCLUDED

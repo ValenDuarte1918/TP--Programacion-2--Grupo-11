@@ -43,7 +43,7 @@ void menuEmpleado(){
             case 0:
                 return;
             default:
-                cout << "Opción incorrecta" << endl;
+                cout << "Opcion incorrecta" << endl;
                 break;
         }
         system("pause");

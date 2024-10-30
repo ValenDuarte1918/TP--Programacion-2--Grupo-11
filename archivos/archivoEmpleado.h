@@ -67,8 +67,12 @@ void archivoEmpleado::listarRegistros() {
     for (int i = 0; i < cant; i++) {
         obj = leerRegistro(i); // Lee el registro en la posición i
         obj.mostrar(); // Muestra los datos del empleado
-        if (obj.getEstado() == true) {
+        if (obj.getEstado() == true) { // Verifica el estado del registro
+            cout << "Estado: Activo" << endl;
+        } else {
+            cout << "Estado: Inactivo" << endl;
         }
+        cout << "<----------------------------------->" << endl;
     }
 }
 
