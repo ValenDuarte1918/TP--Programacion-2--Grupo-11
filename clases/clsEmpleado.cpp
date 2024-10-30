@@ -8,7 +8,7 @@
 
 using namespace std;
 // Definición de la clase Empleado que hereda de la clase Persona
-class Empleado : public Persona {
+class Empleado : public Persona { 
     private:
         int codEmpleado; 
         char cargo[50]; 

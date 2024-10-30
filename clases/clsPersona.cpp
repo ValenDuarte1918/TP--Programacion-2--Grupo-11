@@ -12,7 +12,7 @@ class Persona {
         char nombre[50]; 
         char apellido[50]; 
         int dni; 
-        Fecha fechaNacimiento; 
+        Fecha fechaNacimiento; // Objeto de la clase Fecha
         bool estado; 
 
     public:

@@ -55,13 +55,12 @@ void Proveedor::cargar() {
     cin.getline(direccion, 50);
     cout << "Ingrese telefono: ";
     cin >> telefono;
-    cout << "Ingrese estado (1: activo, 0: inactivo): ";
-    cin >> estado;
-    cin.ignore();
 };
 
 // Implementación del método mostrar
 void Proveedor::mostrar() {
+    cout << "Nombre: " << nombre << endl;
+    cout << "Apellido: " << apellido << endl;
     cout << "Codigo de proveedor: " << codProveedor << endl;
     cout << "Razon social: " << razonSocial << endl;
     cout << "Direccion: " << direccion << endl;
