@@ -1,7 +1,7 @@
 #ifndef DETALLEVENTA_H_INCLUDED
 #define DETALLEVENTA_H_INCLUDED
 
-class DetalleVenta: public Venta{   // Donde se hereda de la clase Venta?
+class DetalleVenta: public Venta{
     protected:
         int _codDetalleVenta, _codProducto, _cantProducto;
         bool _estado;

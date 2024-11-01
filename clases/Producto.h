@@ -10,8 +10,10 @@ class Producto{
         bool _estado;
         
     public:
-        //Producto();
+        
         Producto(int cp=0, int tp=0, const char *n="", const char *c="", float p=0, bool e=false);
+        void cargarP();
+        void mostrarP();
         ///Getters
         int getCodProducto() { return _codProducto; }
         int getTipoProducto() { return _tipoProducto; }
@@ -28,8 +30,7 @@ class Producto{
         void setPrecio(float p){ _precio=p; }
         void setEstado(bool e){ _estado=e; }
         
-        void cargarP();
-        void mostrarP();
+        
 };
 
 #endif // PRODUCTO_H_INCLUDED
