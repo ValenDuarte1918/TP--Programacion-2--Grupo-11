@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1730603237 source:c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\sistema_de_gestion\main.cpp
+1730665764 source:c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\sistema_de_gestion\main.cpp
 	<iostream>
 	<cstring>
 	"./archivos/archivoEmpleado.h"
@@ -88,13 +88,13 @@
 	<cstring>
 	"../clases/Venta.cpp"
 
-1730660913 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\sistema_de_gestion\clases\venta.cpp
+1730663968 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\sistema_de_gestion\clases\venta.cpp
 	"fecha.h"
 
 1730589993 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\sistema_de_gestion\clases\venta.h
 	"fecha.h"
 
-1730663832 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\sistema_de_gestion\informe.h
+1730666294 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\sistema_de_gestion\informe.h
 	<cstring>
 	"./clases/Venta.cpp"
 	"./archivos/archivoVentas.h"

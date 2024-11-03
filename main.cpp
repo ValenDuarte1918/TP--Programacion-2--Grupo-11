@@ -18,8 +18,10 @@ using namespace std;
 
 int main ()
 {
+
     while (true)
     {
+      bool opc2=true;
         int opc, menu;
         system("cls");
         cout<<"1-Menus"<<endl;
@@ -31,8 +33,8 @@ int main ()
         system("cls");
         switch (opc){
         case 1:
-
-            cout << "1-Menu de personas" << endl;
+            while(opc2!=false){
+              cout << "1-Menu de personas" << endl;
             cout << "2-Menu de empleados" << endl;
             cout << "3-Menu de proveedores" << endl;
             cout << "4-Menu de Ventas" << endl;
@@ -53,14 +55,17 @@ int main ()
                menuVenta();
                break;
             case 0:
+              opc2=false;
              break;
             default:
                 cout << "Opcion incorrecta" << endl;
                 break;
             }
+            }
+
           break;
         case 2:
-          ///recauAnual();
+          recauAnual();
           break;
         case 0:
             return 0;
