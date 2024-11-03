@@ -8,12 +8,12 @@
 using namespace std;
 
 class Persona {
-    private: 
-        char nombre[50]; 
-        char apellido[50]; 
-        int dni; 
+    private:
+        char nombre[50];
+        char apellido[50];
+        int dni;
         Fecha fechaNacimiento; // Objeto de la clase Fecha
-        bool estado; 
+        bool estado;
 
     public:
         Persona(){estado = true;} // Constructor que inicializa el estado a true
@@ -24,8 +24,7 @@ class Persona {
         void setFechaNacimiento(Fecha f){fechaNacimiento = f;}; // Establece la fecha de nacimiento
         int getDni(){return dni;}; // Obtiene el DNI
         bool getEstado(){return estado;}; // Obtiene el estado
-       
-  
+
       void cargar(); // Metodo para cargar los datos de la persona
         void mostrar(); // Metodo para mostrar los datos de la persona
 };
@@ -38,11 +37,11 @@ void Persona::cargar() {
     cin >> apellido;
     cout << "Ingrese DNI: ";
     cin >> dni;
-    fechaNacimiento.cargarFecha(); 
+    fechaNacimiento.cargarFecha();
 }
 
 void Persona::mostrar() {
-    if  (estado == true){   
+    if  (estado == true){
         cout << "Nombre: " << nombre << endl;
         cout << "Apellido: " << apellido << endl;
         cout << "DNI: " << dni << endl;

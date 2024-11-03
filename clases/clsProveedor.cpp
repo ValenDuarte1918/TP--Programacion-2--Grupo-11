@@ -55,7 +55,7 @@ void Proveedor::cargar() {
     cin.getline(direccion, 50);
     cout << "Ingrese telefono: ";
     cin >> telefono;
-};
+}
 
 // Implementación del método mostrar
 void Proveedor::mostrar() {
@@ -65,4 +65,4 @@ void Proveedor::mostrar() {
     cout << "Razon social: " << razonSocial << endl;
     cout << "Direccion: " << direccion << endl;
     cout << "Telefono: " << telefono << endl;
-};
+}

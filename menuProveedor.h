@@ -16,7 +16,7 @@ void menuProveedor(){
         cout << "3. Modificar proveedor" << endl;
         cout << "4. Listar proveedor" << endl;
         cout << "5. Limpiar archivo" << endl;
-        cout << "0. Salir" << endl;
+        cout << "0. Volver al Menu" << endl;
         cout << "Ingrese una opcion: ";
         cin >> opc;
         system("cls");

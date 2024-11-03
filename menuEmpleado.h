@@ -17,7 +17,7 @@ void menuEmpleado(){
         cout << "4. Listar Empleados" << endl;
         cout << "5. Buscar Empleado por Cargo" << endl;
         cout << "6. Limpiar Empleados" << endl;
-        cout << "0. Salir" << endl;
+        cout << "0. Volver al Menu" << endl;
         cout << "Ingrese una opción: ";
         cin >> opc;
         system("cls");
