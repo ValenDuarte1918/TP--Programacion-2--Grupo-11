@@ -41,18 +41,18 @@ void modificarVenta() {
 void bajaVenta() {
     archivoVenta obj1;
     int num;
-    cout << "Ingrese el numero de Empleado a eliminar: ";
+    cout << "Ingrese el numero de Venta a eliminar: ";
     cin >> num;
     int pos = obj1.buscarRegistro(num);
     if (pos < 0) {
-        cout << "Empleado no encontrado" << endl;
+        cout << "Venta no encontrado" << endl;
         return;
     }
     Venta obj;
     obj = obj1.leerRegistro(pos);
     obj.setEstado(false);
     obj1.modificarRegistro(obj, pos);
-    cout << "Empleado eliminado" << endl;
+    cout << "Venta eliminado" << endl;
 }
 
 void altaVenta() {
@@ -79,7 +79,7 @@ void buscarVenta() {
     Venta obj;
     int pos = obj1.buscarRegistro(num);
     if (pos < 0) {
-        cout << "Empleado no encontrado" << endl;
+        cout << "Venta no encontrada" << endl;
         return;
     }
     obj = obj1.leerRegistro(pos);
@@ -90,7 +90,7 @@ void buscarVenta() {
 void limpiarVenta() {
     archivoVenta obj1;
     obj1.limpiarArchivo();
-    cout << "Archivo de empleados borrado" << endl;
+    cout << "Archivo de Venta borrado" << endl;
 }
 
 #endif // FUNCIONESVENTA_H_INCLUDED

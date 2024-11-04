@@ -9,7 +9,7 @@ using namespace std;
 #include "Producto.h"
 
 Producto::Producto(int cp, int tp, const char *n, const char *c, float p, bool e){
-    _codProducto=cp;
+    _codProd=cp;
     _tipoProducto=tp;
     strcpy(_nombre, n);
     strcpy(_categoria, c);
@@ -19,7 +19,7 @@ Producto::Producto(int cp, int tp, const char *n, const char *c, float p, bool e
 
 void Producto::cargarP(){
     cout<<"\n Ingreso de Codigo Producto: \n";
-    cin>>_codProducto;
+    cin>>_codProd;
     cout<<"\n Ingreso de Nombre: \n";
     cin.ignore();
     cin.getline(_nombre, 20);
@@ -27,17 +27,15 @@ void Producto::cargarP(){
     // lista de categorias predefinidas
     const char* categorias[] = {"Papeleria", "Salsa", "Fritos", "Bebidas", "Carnes","Panes"};
     int numCategorias = sizeof(categorias) / sizeof(categorias[0]);
-
     // Mostrar opciones de categorias
     cout << "Seleccione la categoria:\n";
     for (int i = 0; i < numCategorias; ++i) {
         cout << i + 1 << ". " << categorias[i] << endl;
     }
-    int opcion; 
+    int opcion;
     cout<<"\n Ingrese Categoria de producto: \n";
     cin>>opcion;
     cin.ignore();
-
     // validar la opcion ingresada
     if (opcion < 1 || opcion > numCategorias) {
         cout << "Opcion invalida. Categoria no asignada." << endl;
@@ -52,7 +50,7 @@ void Producto::cargarP(){
 }
 
 void Producto::mostrarP(){
-    cout<<"\n Codigo Producto: "<<_codProducto;
+    cout<<"\n Codigo Producto: "<<_codProd;
     cout<<"\n Nombre: "<<_nombre;
     cout<<"\n Categoria: "<<_categoria;
     cout<<"\n Precio: "<<_precio;

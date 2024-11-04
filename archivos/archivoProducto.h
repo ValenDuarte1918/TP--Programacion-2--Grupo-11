@@ -76,11 +76,11 @@ int archivoProducto::buscarRegistro(int num) {
     Producto obj;
     for (int i = 0; i < cant; i++) {
         obj = leerRegistro(i);
-        if (num == obj.getCodProducto()) {
+        if (num == obj.getProducto()) {
             return i;
         }
     }
-    return -1; 
+    return -1;
 }
 
 Producto archivoProducto::leerRegistro(int pos) {

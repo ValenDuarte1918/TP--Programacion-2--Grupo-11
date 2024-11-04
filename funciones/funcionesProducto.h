@@ -39,7 +39,7 @@ void modificarProducto() {
     cin >> codProd;
 
     // Establece el nuevo código del producto
-    obj.setCodProducto(codProd);
+    obj.setProducto(codProd);
 
     // Modifica el registro del producto en la posición especificada
     obj1.modificarRegistro(obj, pos);
@@ -90,7 +90,7 @@ void altaProducto() {
     obj.cargarP();
 
     // Verifica si el código del producto ya existe
-    int codProducto = obj.getCodProducto();
+    int codProducto = obj.getProducto();
     int pos = obj1.buscarRegistro(codProducto);
     if (pos != -1) {
         cout << "Ese Codigo de producto ya existe" << endl; // Mensaje si el código de producto ya existe

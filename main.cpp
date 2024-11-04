@@ -35,7 +35,7 @@ int main ()
         switch (opc){
         case 1:
             while(opc2!=false){
-              cout << "1-Menu de personas" << endl;
+            cout << "1-Menu de personas" << endl;
             cout << "2-Menu de empleados" << endl;
             cout << "3-Menu de proveedores" << endl;
             cout << "4-Menu de Ventas" << endl;
@@ -71,6 +71,10 @@ int main ()
           break;
         case 2:
           recauAnual();
+          cout<<endl;
+          recauEmp();
+          cout<<endl;
+          producMasConsum();
           break;
         case 0:
             return 0;
