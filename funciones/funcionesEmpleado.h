@@ -112,7 +112,7 @@ void buscarEmpleado() {
     int num;
 
     // Solicita el número de empleado a buscar
-    cout << "Ingrese el numero de empleado a buscar: ";
+    cout << "Ingrese el numero de DNI a buscar: ";
     cin >> num;
 
     archivoEmpleado obj1;

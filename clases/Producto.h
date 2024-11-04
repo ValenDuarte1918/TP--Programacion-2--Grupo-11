@@ -4,7 +4,7 @@
 
 class Producto{
     protected:
-        int _codProducto, _tipoProducto;
+        int _tipoProducto, _codProducto;
         char _nombre[20], _categoria[20];
         float _precio;
         bool _estado;
@@ -23,7 +23,7 @@ class Producto{
         bool getEstado() { return _estado; }
         
         ///Setters
-        void setCodProducto(int cp){ _codProducto=cp; }
+        void setCodProducto(int cp){_codProducto=cp;} 
         void setTipoProducto(int tp){ _tipoProducto=tp; }
         void setNombre(char *n){ strcpy(_nombre, n); }
         void setCategoria(char *c){ strcpy(_categoria, c); }

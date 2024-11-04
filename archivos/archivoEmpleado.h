@@ -108,7 +108,7 @@ int archivoEmpleado::buscarRegistro(int num) {
     Empleado obj;
     for (int i = 0; i < cant; i++) {
         obj = leerRegistro(i); // Lee el registro en la posición i
-        if (num == obj.getCodEmpleado()) {
+        if (num == obj.getDni()) {
             return i; // Retorna la posición si el código del empleado coincide
         }
     }

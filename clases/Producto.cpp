@@ -20,24 +20,42 @@ Producto::Producto(int cp, int tp, const char *n, const char *c, float p, bool e
 void Producto::cargarP(){
     cout<<"\n Ingreso de Codigo Producto: \n";
     cin>>_codProducto;
-    cout<<"\n Ingreso de Tipo Producto: \n";
-    cin>>_tipoProducto;
     cout<<"\n Ingreso de Nombre: \n";
     cin.ignore();
-    gets(_nombre);
-    cout<<"\n Ingreso de Categoria: \n";
-    gets(_categoria);
+    cin.getline(_nombre, 20);
+
+    // lista de categorias predefinidas
+    const char* categorias[] = {"Papeleria", "Salsa", "Fritos", "Bebidas", "Carnes","Panes"};
+    int numCategorias = sizeof(categorias) / sizeof(categorias[0]);
+
+    // Mostrar opciones de categorias
+    cout << "Seleccione la categoria:\n";
+    for (int i = 0; i < numCategorias; ++i) {
+        cout << i + 1 << ". " << categorias[i] << endl;
+    }
+    int opcion; 
+    cout<<"\n Ingrese Categoria de producto: \n";
+    cin>>opcion;
+    cin.ignore();
+
+    // validar la opcion ingresada
+    if (opcion < 1 || opcion > numCategorias) {
+        cout << "Opcion invalida. Categoria no asignada." << endl;
+        strcpy(_categoria, "Sin asignar");
+    } else {
+        strcpy(_categoria, categorias[opcion - 1]);
+    }
     cout<<"\n Ingreso de Precio: \n";
     cin>>_precio;
-    cout<<"\n Ingreso de Estado: \n";
-    cin>>_estado;
+    cout<<"\n Ingreso de Estado: \n" ;
+    cin>>_estado ;
 }
 
 void Producto::mostrarP(){
     cout<<"\n Codigo Producto: "<<_codProducto;
-    cout<<"\n Tipo Producto: "<<_tipoProducto;
     cout<<"\n Nombre: "<<_nombre;
     cout<<"\n Categoria: "<<_categoria;
     cout<<"\n Precio: "<<_precio;
-    cout<<"\n Estado: "<<_estado;
+    cout<<"\n Estado: "<<_estado << endl;
+    cout<<"<--------------------------------------->"<<endl;
 }

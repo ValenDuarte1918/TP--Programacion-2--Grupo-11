@@ -14,6 +14,7 @@ using namespace std;
 #include "menuEmpleado.h"
 #include "menuProveedor.h"
 #include "menuVenta.cpp"
+#include "menuProductos.h"
 #include "Informe.h"
 
 int main ()
@@ -38,6 +39,7 @@ int main ()
             cout << "2-Menu de empleados" << endl;
             cout << "3-Menu de proveedores" << endl;
             cout << "4-Menu de Ventas" << endl;
+            cout << "5-Menu de Productos" << endl;
             cout << "0-Volver al Menu Principal" << endl;
             cout << "Ingrese una opcion: ";
             cin>>menu;
@@ -54,6 +56,9 @@ int main ()
             case 4:
                menuVenta();
                break;
+            case 5:
+                menuProductos();
+                break;
             case 0:
               opc2=false;
              break;
