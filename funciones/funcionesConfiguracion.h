@@ -1,8 +1,8 @@
 #ifndef FUNCIONES_CONFIGURACION_H
 #define FUNCIONES_CONFIGURACION_H
-#include "./archivos/archivoVentas.h"
-#include "./archivos/archivoEmpleado.h"
-#include "./archivos/archivoProducto.h"
+#include "../archivos/archivoVentas.h"
+#include "../archivos/archivoEmpleado.h"
+#include "../archivos/archivoProducto.h"
 #include <iostream>
 
 using namespace std;
