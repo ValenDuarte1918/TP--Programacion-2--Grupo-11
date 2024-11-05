@@ -1,11 +1,11 @@
 #ifndef INFORME_H_INCLUDED
 #define INFORME_H_INCLUDED
 #include <cstring>
-#include <array>
-#include "./clases/Venta.cpp"
 #include "./archivos/archivoVentas.h"
+#include "./clases/Venta.cpp"
+#include "./archivos/archivoProducto.h"
 #include "./clases/Fecha.h"
-#include "./clases/clsEmpleado.cpp"
+#include "./clases/Producto.h"
 
 void ponerCeroInt(int* cod, int tam){
   for(int i=0;i<tam;i++) cod[i]=0;
@@ -75,8 +75,30 @@ void recauEmp(){
     system("pause");
 }
 
-void producMasConsum () {
+void producMasConsum() {
+    archivoVenta archiVenta("Venta.dat");
+    Venta ven;
+    int cont = archiVenta.contarRegistros();
+    const char* nombreProducto[14] = {"Pizza", "Hamburguesa", "Empanadas","Sandwich","Coca cola","Helado","Pepsi","Licuado","Agua","Nuggets","Nachos","Papas","Ensalada","Cafe"};
+    int vecProd[14]={},maximo = 0, tipoProduct = 0, produc;
+    for (int i = 0;i<cont; i++) {
+        ven = archiVenta.leerRegistro(i);
+        produc = ven.getNumProduct();
+          vecProd[produc-1]++;
+        if (i==0) {
+            maximo = vecProd[produc-1];;
+            tipoProduct = produc;
+        }
+        if (maximo<vecProd[produc-1]) {
+            maximo = vecProd[produc-1];
+            tipoProduct = produc;
+        }
+
+    }
+    cout << "El producto más comprado es el tipo: " << nombreProducto[tipoProduct-1] << endl;
+    system("pause");
 }
+
 
 
 #endif // INFORME_H_INCLUDED
