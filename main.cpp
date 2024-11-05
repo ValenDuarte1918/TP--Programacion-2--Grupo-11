@@ -15,6 +15,7 @@ using namespace std;
 #include "menuProveedor.h"
 #include "menuVenta.cpp"
 #include "menuProductos.h"
+#include "menuConfiguraciones.h"
 #include "Informe.h"
 
 int main ()
@@ -27,7 +28,7 @@ int main ()
         system("cls");
         cout<<"1-Menus"<<endl;
         cout<<"2-Informes"<<endl;
-        cout<<"3-Consultas"<<endl;
+        cout<<"3-Configuraciones"<<endl;
         cout<<"0-Salir"<<endl;
         cout<<"Ingrese un numero"<<endl;
         cin >> opc;
@@ -76,6 +77,9 @@ int main ()
           cout<<endl;
           producMasConsum();
           break;
+        case 3:
+            menuConfiguraciones();
+            break;
         case 0:
             return 0;
         }
