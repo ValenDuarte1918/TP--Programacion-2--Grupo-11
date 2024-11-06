@@ -44,24 +44,38 @@ void menuEmpleado(){
            switch(contEmp){
              case 0:
                altaEmpleado();
+               system("pause");
+                system("cls");
                break;
            case 1:
                bajaEmpleado();
+               system("pause");
+                system("cls");
                break;
            case 2:
                modificarEmpleado();
+               system("pause");
+                system("cls");
                break;
            case 3:
                listarEmpleado();
+               system("pause");
+                system("cls");
                break;
            case 4:
                buscarEmpleadoPorCargo();
+               system("pause");
+                system("cls");
                break;
            case 5:
                buscarEmpleado();
+               system("pause");
+                system("cls");
                break;
            case 6:
                limpiarArchivo();
+               system("pause");
+                system("cls");
                break;
            case 7:
                return;

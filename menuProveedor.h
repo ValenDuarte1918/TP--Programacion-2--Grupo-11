@@ -43,18 +43,28 @@ void menuProveedor(){
           switch(contProv){
           case 0:
               altaProveedor();
+              system("pause");
+                system("cls");
               break;
           case 1:
               bajaProveedor();
+              system("pause");
+                system("cls");
               break;
           case 2:
               modificarProveedor();
+              system("pause");
+                system("cls");
               break;
           case 3:
               listarProveedor();
+              system("pause");
+                system("cls");
               break;
           case 4:
               limpiarProveedor();
+              system("pause");
+                system("cls");
               break;
           case 5:
               return;

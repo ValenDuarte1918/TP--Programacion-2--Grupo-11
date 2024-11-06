@@ -42,22 +42,32 @@ void menuVenta(){
           case 1:
             system("cls");
             switch(contVent){
-            case 0:
+             case 0:
                 altaVenta();
+                system("pause");
+                system("cls");
                 break;
-            case 1:
+             case 1:
                 bajaVenta();
+                system("pause");
+                system("cls");
                 break;
-            case 2:
+             case 2:
                 modificarVenta();
+                system("pause");
+                system("cls");
                 break;
-            case 3:
+             case 3:
                 listarVenta();
+                system("pause");
+                system("cls");
                 break;
-            case 4:
+             case 4:
                 limpiarVenta();
+                system("pause");
+                system("cls");
                 break;
-            case 5:
+             case 5:
                 return;
             }
           break;

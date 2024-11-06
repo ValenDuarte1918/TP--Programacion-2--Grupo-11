@@ -18,9 +18,9 @@ Producto::Producto(int cp, int tp, const char *n, const char *c, float p, bool e
 }
 
 void Producto::cargarP(){
-    cout<<"\n Ingreso de Codigo Producto: \n";
+    cout<<"Ingreso de Codigo Producto: "<<endl;
     cin>>_codProd;
-    cout<<"\n Ingreso de Nombre: \n";
+    cout<<"Ingreso de Nombre: "<<endl;
     cin.ignore();
     cin.getline(_nombre, 20);
 
@@ -28,12 +28,12 @@ void Producto::cargarP(){
     const char* categorias[] = {"Papeleria", "Salsa", "Fritos", "Bebidas", "Carnes","Panes"};
     int numCategorias = sizeof(categorias) / sizeof(categorias[0]);
     // Mostrar opciones de categorias
-    cout << "Seleccione la categoria:\n";
+    cout << "Seleccione la categoria:"<<endl;
     for (int i = 0; i < numCategorias; ++i) {
         cout << i + 1 << ". " << categorias[i] << endl;
     }
     int opcion;
-    cout<<"\n Ingrese Categoria de producto: \n";
+    cout<<"Ingrese Categoria de producto: "<<endl;
     cin>>opcion;
     cin.ignore();
     // validar la opcion ingresada
@@ -43,17 +43,16 @@ void Producto::cargarP(){
     } else {
         strcpy(_categoria, categorias[opcion - 1]);
     }
-    cout<<"\n Ingreso de Precio: \n";
+    cout<<"Ingreso de Precio: "<<endl;
     cin>>_precio;
-    cout<<"\n Ingreso de Estado: \n" ;
-    cin>>_estado ;
+    _estado=true;
 }
 
 void Producto::mostrarP(){
-    cout<<"\n Codigo Producto: "<<_codProd;
-    cout<<"\n Nombre: "<<_nombre;
-    cout<<"\n Categoria: "<<_categoria;
-    cout<<"\n Precio: "<<_precio;
-    cout<<"\n Estado: "<<_estado << endl;
+    cout<<"Codigo Producto: "<<_codProd;
+    cout<<"Nombre: "<<_nombre;
+    cout<<"Categoria: "<<_categoria;
+    cout<<"Precio: "<<_precio;
+    cout<<"Estado: "<<_estado << endl;
     cout<<"<--------------------------------------->"<<endl;
 }

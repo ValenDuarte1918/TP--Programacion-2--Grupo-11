@@ -45,18 +45,28 @@ void menuPersona(){
           switch(contPers){
             case 0:
                 altaRegistro();
+                system("pause");
+                system("cls");
                 break;
             case 1:
                 bajaRegistro();
+                system("pause");
+                system("cls");
                 break;
             case 2:
                 modificarRegistro();
+                system("pause");
+                system("cls");
                 break;
             case 3:
                 listarRegistros();
+                system("pause");
+                system("cls");
                 break;
             case 4:
                 limpiarArchivo();
+                system("pause");
+                system("cls");
                 break;
             case 5:
                 return;

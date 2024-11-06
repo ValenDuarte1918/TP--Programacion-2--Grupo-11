@@ -46,27 +46,43 @@ void menuProductos(){
         switch(contProd){
           case 0:
             altaProducto();
+            system("pause");
+              system("cls");
             break;
           case 1:
             bajaProducto();
+            system("pause");
+              system("cls");
             break;
           case 2:
             modificarProducto();
+            system("pause");
+              system("cls");
             break;
           case 3:
             listarProducto();
+            system("pause");
+              system("cls");
             break;
           case 4:
             limpiarProducto();
+            system("pause");
+              system("cls");
             break;
           case 5:
             buscarProductoCategoria();
+            system("pause");
+              system("cls");
             break;
           case 6:
             buscarProductoCodigo();
+            system("pause");
+                system("cls");
             break;
          case 7:
             buscarProductoPrecio();
+            system("pause");
+                system("cls");
             break;
           case 8:
             return;
