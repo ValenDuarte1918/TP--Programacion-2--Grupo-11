@@ -46,14 +46,12 @@ void Producto::cargarP(){
     cout<<"\n Ingreso de Precio: \n";
     cin>>_precio;
     cout<<"\n Ingreso de Estado: \n" ;
-    cin>>_estado ;
+    cin>>_estado;
 }
 
 void Producto::mostrarP(){
     cout<<"\n Codigo Producto: "<<_codProd;
     cout<<"\n Nombre: "<<_nombre;
     cout<<"\n Categoria: "<<_categoria;
-    cout<<"\n Precio: "<<_precio;
-    cout<<"\n Estado: "<<_estado << endl;
-    cout<<"<--------------------------------------->"<<endl;
+    cout<<"\n Precio: "<<_precio << endl;
 }

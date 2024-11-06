@@ -1,6 +1,8 @@
 #ifndef INFORME_H_INCLUDED
 #define INFORME_H_INCLUDED
 #include <cstring>
+#include <iostream>
+#include <iomanip>
 #include "./archivos/archivoVentas.h"
 #include "./clases/Venta.cpp"
 #include "./archivos/archivoProducto.h"
@@ -68,7 +70,7 @@ void recauEmp(){
       recaudacionEmpleados[j] += totalVenta;
     }
     for (int i = 0; i < numEmp; i++) {
-        cout << "Empleado con Codigo: " << codEmpleados[i] << ", Recaudacion del ultimo mes: $" << recaudacionEmpleados[i] << endl;
+        cout << "Empleado con Codigo: " << codEmpleados[i] << ", Recaudacion del ultimo mes: $" << fixed << setprecision(2) << recaudacionEmpleados[i] << endl;
     }
     delete[] codEmpleados;
     delete[] recaudacionEmpleados;
@@ -95,7 +97,7 @@ void producMasConsum() {
         }
 
     }
-    cout << "El producto más comprado es el tipo: " << nombreProducto[tipoProduct-1] << endl;
+    cout << "El producto mas comprado es el tipo: " << nombreProducto[tipoProduct-1] << endl;
     system("pause");
 }
 
