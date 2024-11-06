@@ -129,7 +129,7 @@
 	<cstring>
 	"./funciones/funcionesVenta.h"
 
-1730751326 source:c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\main.cpp
+1730866348 source:c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\main.cpp
 	<iostream>
 	<cstring>
 	"./archivos/archivoEmpleado.h"
@@ -145,117 +145,124 @@
 	"menuProveedor.h"
 	"menuVenta.cpp"
 	"menuProductos.h"
+	"menuConfiguraciones.h"
 	"Informe.h"
+	"rlutil.h"
 
-1730688442 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\archivos\archivoempleado.h
+1730847094 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\archivos\archivoempleado.h
 	<iostream>
 	<cstring>
 	"../clases/clsEmpleado.cpp"
 
-1730688442 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\clases\clsempleado.cpp
+1730847094 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\clases\clsempleado.cpp
 	<iostream>
 	<cstring>
 	<locale>
 	"clsPersona.cpp"
 
-1730688442 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\clases\clspersona.cpp
+1730847094 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\clases\clspersona.cpp
 	"clsFecha.cpp"
 	<iostream>
 	<cstring>
 
-1730688442 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\clases\clsfecha.cpp
+1730847094 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\clases\clsfecha.cpp
 	"./Fecha.h"
 	<iostream>
 
-1730688442 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\clases\fecha.h
+1730847094 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\clases\fecha.h
 	<iostream>
 
-1730688442 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\archivos\archivopersona.h
+1730847094 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\archivos\archivopersona.h
 	<iostream>
 	<cstring>
 	"../clases/clsPersona.cpp"
 
-1730688442 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\archivos\archivoproveedor.h
+1730847094 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\archivos\archivoproveedor.h
 	<iostream>
 	<cstring>
 	"../clases/clsProveedor.cpp"
 
-1730688442 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\clases\clsproveedor.cpp
+1730847094 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\clases\clsproveedor.cpp
 	<iostream>
 	<cstring>
 	"clsPersona.cpp"
 
-1730688442 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\archivos\archivoventas.h
+1730847094 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\archivos\archivoventas.h
 	<iostream>
 	<cstring>
 	"../clases/Venta.cpp"
 
-1730820369 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\clases\venta.cpp
+1730847094 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\clases\venta.cpp
 	"fecha.h"
 
-1730688442 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\funciones\funcionespersona.h
+1730847094 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\funciones\funcionespersona.h
 	<iostream>
 	<cstring>
 	<cstdio>
 	"../archivos/archivoPersona.h"
 
-1730688442 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\funciones\funcionesempleado.h
+1730847094 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\funciones\funcionesempleado.h
 	<iostream>
 	<cstring>
 	<cstdio>
 	"../archivos/archivoEmpleado.h"
 
-1730688442 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\funciones\funcionesproveedor.h
+1730847094 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\funciones\funcionesproveedor.h
 
-1730688442 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\menupersona.h
+1730862954 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\menupersona.h
 	<iostream>
 	<cstring>
 	"./funciones/funcionesPersona.h"
+	"rlutil.h"
 
-1730688442 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\menuempleado.h
+1730864909 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\menuempleado.h
 	<iostream>
 	<cstring>
 	"./funciones/funcionesEmpleado.h"
+	"rlutil.h"
 
-1730688442 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\menuproveedor.h
+1730863696 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\menuproveedor.h
 	<iostream>
 	<cstring>
 	"./funciones/funcionesProveedor.h"
+	"rlutil.h"
 
-1730688442 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\menuventa.cpp
+1730862970 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\menuventa.cpp
 	<iostream>
 	<cstring>
 	"./funciones/funcionesVenta.h"
+	"rlutil.h"
 
-1730730257 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\funciones\funcionesventa.h
+1730847094 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\funciones\funcionesventa.h
 	<iostream>
 	<cstring>
 	<cstdio>
 	"../archivos/archivoVentas.h"
 	"../clases/Venta.cpp"
 
-1730688442 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\menuproductos.h
+1730866212 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\menuproductos.h
 	<iostream>
 	<cstring>
 	<cstdio>
 	"./funciones/funcionesProducto.h"
+	"rlutil.h"
 
-1730751837 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\funciones\funcionesproducto.h
+1730847094 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\funciones\funcionesproducto.h
 	<iostream>
 	<cstring>
 	<cstdio>
 	"../archivos/archivoProducto.h"
 
-1730751816 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\archivos\archivoproducto.h
+1730847094 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\archivos\archivoproducto.h
 	<iostream>
 	<cstring>
 	"../clases/Producto.h"
 	"../clases/Producto.cpp"
 
-1730752113 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\clases\producto.h
+1730847094 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\clases\producto.h
 	"Venta.h"
 
-1730751757 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\clases\producto.cpp
+1730847094 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\clases\producto.cpp
 	<iostream>
 	<cstdlib>
 	<stdio.h>
@@ -264,19 +271,45 @@
 	<cstring>
 	"Producto.h"
 
-1730822149 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\informe.h
+1730858325 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\informe.h
 	<cstring>
 	"./archivos/archivoVentas.h"
 	"./clases/Venta.cpp"
 	"./archivos/archivoProducto.h"
 	"./clases/Fecha.h"
 	"./clases/Producto.h"
+	"rlutil.h"
 
-1730688442 source:c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\menuventa.cpp
+1730847094 source:c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\menuventa.cpp
 	<iostream>
 	<cstring>
 	"./funciones/funcionesVenta.h"
 
-1730688442 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\clases\venta.h
+1730847094 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\clases\venta.h
 	"fecha.h"
+
+1730864788 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\menuconfiguraciones.h
+	"./funciones/funcionesConfiguracion.h"
+	<iostream>
+	"rlutil.h"
+
+1730849089 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\funciones\funcionesconfiguracion.h
+	"../archivos/archivoVentas.h"
+	"../archivos/archivoEmpleado.h"
+	"../archivos/archivoProducto.h"
+	<iostream>
+
+1730847094 c:\users\pais gamer\desktop\utn nivelacion\laboratorio de computacion\tp--programacion-2--grupo-11-main\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
 

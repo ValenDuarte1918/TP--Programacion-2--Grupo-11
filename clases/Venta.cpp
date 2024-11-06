@@ -63,7 +63,7 @@ void Venta::cargar() {
     cin>>op;
     cin.ignore();
     if (op < 1 || op > opcionProd) {
-      cout << "Opciï¿½n invï¿½lida. Producto no cargado." << endl;
+      cout << "Opción inválida. Producto no cargado." << endl;
       strcpy(_Producto, "Sin asignar");
     } else {
       _numProd=op;
@@ -81,4 +81,5 @@ void Venta::mostrar() {
     cout<<"Total: $"<<getTotal()<<endl;
     cout<<"Precio Unitario: $"<<getPrecioUnitario()<<endl;
     cout<<"Producto: "<<_Producto<<endl;
+    cout<<"Opcion guardada: "<<getNumProduct()<<endl;
 }

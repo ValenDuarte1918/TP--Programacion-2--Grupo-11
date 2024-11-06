@@ -17,71 +17,145 @@ using namespace std;
 #include "menuProductos.h"
 #include "menuConfiguraciones.h"
 #include "Informe.h"
+#include "rlutil.h"
 
-int main ()
-{
-
-    while (true)
-    {
+void menus(bool opc2);
+void informe(bool opc3);
+void selector(const char* text, int posX, int posY){
+  rlutil::locate(posX,posY);
+  cout<<text<<endl;
+}
+int main (){
+    rlutil::hidecursor();
+    int cont=0;
+    system("cls");
+    while (true) {
+      rlutil::setColor(3);
       bool opc2=true;
-        int opc, menu;
-        system("cls");
-        cout<<"1-Menus"<<endl;
-        cout<<"2-Informes"<<endl;
-        cout<<"3-Configuraciones"<<endl;
-        cout<<"0-Salir"<<endl;
-        cout<<"Ingrese un numero"<<endl;
-        cin >> opc;
-        system("cls");
-        switch (opc){
+      bool opc3=true;
+        selector("    Menus",58,8);
+        selector("   Informe",58,9);
+        selector("Configuracion",58,10);
+        selector("    Salir",58,11);
+        selector(">",56,8+cont);
+        int opc = rlutil::getkey();
+        switch(opc){
+        case 14:
+          selector(" ",56,8+cont);
+          cont--;
+          if(cont<0) cont=0;
+          break;
+        case 15:
+          selector(" ",56,8+cont);
+          cont++;
+          if(cont>3) cont=3;
+          break;
         case 1:
-            while(opc2!=false){
-            cout << "1-Menu de personas" << endl;
-            cout << "2-Menu de empleados" << endl;
-            cout << "3-Menu de proveedores" << endl;
-            cout << "4-Menu de Ventas" << endl;
-            cout << "5-Menu de Productos" << endl;
-            cout << "0-Volver al Menu Principal" << endl;
-            cout << "Ingrese una opcion: ";
-            cin>>menu;
-            switch(menu){
-            case 1:
-                menuPersona();
-                break;
-            case 2:
-                menuEmpleado();
-                break;
-            case 3:
-                menuProveedor();
-                break;
-            case 4:
-               menuVenta();
-               break;
-            case 5:
-                menuProductos();
-                break;
-            case 0:
-              opc2=false;
-             break;
-            default:
-                cout << "Opcion incorrecta" << endl;
-                break;
-            }
-            }
-
-          break;
-        case 2:
-          recauAnual();
-          cout<<endl;
-          recauEmp();
-          cout<<endl;
-          producMasConsum();
-          break;
-        case 3:
+          system("cls");
+          if(cont==0){
+            menus(opc2);
+          }else if(cont==1){
+            informe(opc3);
+          }else if(cont==2){
             menuConfiguraciones();
-            break;
-        case 0:
+          }else if(cont==3){
             return 0;
+          }
+          break;
         }
     }
+}
+void menus(bool opc2){
+  int contMenu=0;
+  system("cls");
+  while(opc2!=false){
+    selector("  Menu Persona",56,8);
+    selector(" Menu Empleados",56,9);
+    selector("Menu Proveedores",56,10);
+    selector("   Menu Venta",56,11);
+    selector(" Menu Productos",56,12);
+    selector(" Menu Principal",56,13);
+    selector(">",54,8+contMenu);
+   int menu=rlutil::getkey();
+   switch(menu){
+    case 14:
+      selector(" ",54,8+contMenu);
+      contMenu--;
+      if(contMenu<0) contMenu=0;
+     break;
+    case 15:
+      selector(" ",54,8+contMenu);
+      contMenu++;
+      if(contMenu>5) contMenu=5;
+     break;
+    case 1:
+      system("cls");
+      switch(contMenu){
+        case 0:
+        menuPersona();
+        break;
+        case 1:
+        menuEmpleado();
+        break;
+      case 2:
+        menuProveedor();
+        break;
+      case 3:
+        menuVenta();
+        break;
+      case 4:
+        menuProductos();
+        break;
+      case 5:
+        opc2=false;
+        break;
+      }
+      break;
+   }
+   }
+}
+
+void informe(bool opc3){
+  int contInfo=0;
+  system("cls");
+while(opc3!=false){
+    selector("  Recaudacion Anual",56,8);
+    selector("Recaudacion  Empleados",56,9);
+    selector("Producto mas consumido",56,10);
+    selector("        Salir",56,11);
+    selector(">",54,8+contInfo);
+  int info= rlutil::getkey();
+  switch(info){
+  case 14:
+    selector(" ",54,8+contInfo);
+    contInfo--;
+    if(contInfo<0) contInfo =0;
+   break;
+  case 15:
+    selector(" ",54,8+contInfo);
+    contInfo++;
+    if(contInfo>3) contInfo =3;
+   break;
+  case 1:
+  system("cls");
+  switch(contInfo){
+    case 0:
+      recauAnual();
+      system("cls");
+      break;
+    case 1:
+      recauEmp();
+      system("cls");
+      break;
+    case 2:
+      producMasConsum();
+      system("cls");
+      break;
+    case 3:
+    opc3=false;
+    break;
+      }
+      break;
+    }
+  }
 }

@@ -6,43 +6,62 @@
 
 using namespace std;
 
+#include "rlutil.h"
+
+void selectPersona(const char* text, int posX, int posY){
+  rlutil::locate(posX,posY);
+  cout<<text<<endl;
+}
+
 void menuPersona(){
+  system("cls");
+  int contPers=0;
     while (true) {
-        int opc;
-        system("cls");
-        cout << "Menu de personas" << endl;
-        cout << "1. Cargar persona" << endl;
-        cout << "2. Baja persona" << endl;
-        cout << "3. Modificar persona" << endl;
-        cout << "4. Listar personas" << endl;
-        cout << "5. Limpiar archivo" << endl;
-        cout << "0. Volver al Menu" << endl;
-        cout << "Ingrese una opción: ";
-        cin >> opc;
-        system("cls");
+        selectPersona("Menu de personas",54,4);
+        selectPersona(" Cargar persona",54,6);
+        selectPersona("  Baja persona",54,7);
+        selectPersona("Modificar persona",54,8);
+        selectPersona(" Listar personas",54,9);
+        selectPersona(" Limpiar archivo",54,10);
+        selectPersona("  Volver a Menu",54,11);
+        rlutil::locate(52,6+contPers);
+        cout<<(char)62<<endl;
+        int opc=rlutil::getkey();
         switch (opc) {
-            case 1:
+        case 14:
+          rlutil::locate(52,6+contPers);
+          cout<<" "<<endl;
+          contPers--;
+          if(contPers<0) contPers=0;
+          break;
+        case 15:
+          rlutil::locate(52,6+contPers);
+          cout<<" "<<endl;
+          contPers++;
+          if(contPers>5) contPers=5;
+          break;
+        case 1:
+          system("cls");
+          switch(contPers){
+            case 0:
                 altaRegistro();
                 break;
-            case 2:
+            case 1:
                 bajaRegistro();
                 break;
-            case 3:
+            case 2:
                 modificarRegistro();
                 break;
-            case 4:
+            case 3:
                 listarRegistros();
                 break;
-            case 5:
+            case 4:
                 limpiarArchivo();
                 break;
-            case 0:
+            case 5:
                 return;
-            default:
-                cout << "Opcion incorrecta" << endl;
-                break;
+          }
         }
-        system("pause");
     }
 }
 #endif // MENUPERSONA_H_INCLUDED

@@ -56,13 +56,9 @@ void archivoProducto::listarRegistros() {
     Producto obj;
     for (int i = 0; i < cant; i++) {
         obj = leerRegistro(i);
-        obj.mostrarP();
         if (obj.getEstado() == true){
-            cout << "Estado: Activo" << endl;
-        } else {
-            cout << "Estado: Inactivo" << endl; 
+            obj.mostrarP();
         }
-        cout << "<--------------------------------------->" << endl;
     }
 }
 

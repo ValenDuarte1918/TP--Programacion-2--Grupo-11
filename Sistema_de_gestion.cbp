@@ -38,6 +38,7 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="menuEmpleado.h" />
 		<Unit filename="menuPersona.h" />
+		<Unit filename="menuProductos.h" />
 		<Unit filename="menuProveedor.h" />
 		<Unit filename="menuVenta.cpp">
 			<Option compilerVar="H" />

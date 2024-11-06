@@ -6,51 +6,68 @@
 
 using namespace std;
 
+#include "rlutil.h"
+
+void selectEmpleado(const char* text, int posX, int posY){
+  rlutil::locate(posX,posY);
+  cout<<text<<endl;
+}
+
 void menuEmpleado(){
+  system("cls");
+  int contEmp=0;
     while (true) {
-        int opc;
-        system("cls");
-        cout << "Menu de Empleados" << endl;
-        cout << "1. Cargar Empleado" << endl;
-        cout << "2. Baja Empleado" << endl;
-        cout << "3. Modificar Empleado" << endl;
-        cout << "4. Listar Empleados" << endl;
-        cout << "5. Buscar Empleado por Cargo" << endl;
-        cout << "6. Buscar Empleado por DNI" << endl;
-        cout << "7. Limpiar Empleados" << endl;
-        cout << "0. Volver al Menu" << endl;
-        cout << "Ingrese una opción: ";
-        cin >> opc;
-        system("cls");
-        switch (opc) {
-            case 1:
-                altaEmpleado();
-                break;
-            case 2:
-                bajaEmpleado();
-                break;
-            case 3:
-                modificarEmpleado();
-                break;
-            case 4:
-                listarEmpleado();
-                break;
-            case 5:
-                buscarEmpleadoPorCargo();
-                break;
-            case 6:
-                buscarEmpleado();
-                break;
-            case 7:
-                limpiarArchivo();
-                break;
-            case 0:
-                return;
-            default:
-                cout << "Opcion incorrecta" << endl;
-                break;
-        }
-        system("pause");
+       selectEmpleado("Menu de Empleados",54,4);
+       selectEmpleado("Cargar Empleado",54,6);
+       selectEmpleado("Baja Empleado",54,7);
+       selectEmpleado("Modificar Empleado",54,8);
+       selectEmpleado("Listar Empleados",54,9);
+       selectEmpleado("Buscar Empleado por Cargo",54,10);
+       selectEmpleado("Buscar Empleado por DNI",54,11);
+       selectEmpleado("Limpiar Empleados",54,12);
+       selectEmpleado("Volver al Menu",54,13);
+       selectEmpleado(">",52,6+contEmp);
+       int opc=rlutil::getkey();
+       switch (opc) {
+         case 14:
+           selectEmpleado(" ",52,6+contEmp);
+           contEmp--;
+           if(contEmp<0) contEmp=0;
+          break;
+         case 15:
+           selectEmpleado(" ",52,6+contEmp);
+           contEmp++;
+           if(contEmp>7) contEmp=7;
+          break;
+         case 1:
+          system("cls");
+           switch(contEmp){
+             case 0:
+               altaEmpleado();
+               break;
+           case 1:
+               bajaEmpleado();
+               break;
+           case 2:
+               modificarEmpleado();
+               break;
+           case 3:
+               listarEmpleado();
+               break;
+           case 4:
+               buscarEmpleadoPorCargo();
+               break;
+           case 5:
+               buscarEmpleado();
+               break;
+           case 6:
+               limpiarArchivo();
+               break;
+           case 7:
+               return;
+           }
+          break;
+       }
     }
 }
 #endif // MENUEMPLEADO_H_INCLUDED

@@ -7,55 +7,73 @@
 
 using namespace std;
 
+#include "rlutil.h"
+
+void selectProducto(const char* text, int posX, int posY){
+  rlutil::locate(posX,posY);
+  cout<<text<<endl;
+}
+
 void menuProductos(){
-    while (true){
-        int opc;
+  system("cls");
+  int contProd=0;
+  while (true){
+    selectProducto("      Menu de Productos",54,4);
+    selectProducto("       Cargar Producto",54,6);
+    selectProducto("        Baja Producto",54,7);
+    selectProducto("     Modificar  Producto",54,8);
+    selectProducto("      Listar  Productos",54,9);
+    selectProducto("      Limpiar Productos",54,10);
+    selectProducto("Buscar Producto por Categoria",54,11);
+    selectProducto(" Buscar Producto por Codigo",54,12);
+    selectProducto(" Buscar Producto por Precio",54,13);
+    selectProducto("        Volver a Menu",54,14);
+    selectProducto(">",52,6+contProd);
+    int opc=rlutil::getkey();
+    switch (opc){
+      case 14:
+      selectProducto(" ",52,6+contProd);
+        contProd--;
+        if(contProd<0) contProd=0;
+        break;
+      case 15:
+      selectProducto(" ",52,6+contProd);
+        contProd++;
+        if(contProd>8) contProd=8;
+        break;
+      case 1:
         system("cls");
-        cout << "Menu de Productos" << endl;
-        cout << "1. Cargar Producto" << endl;
-        cout << "2. Baja Producto" << endl;
-        cout << "3. Modificar Producto" << endl;
-        cout << "4. Listar Productos" << endl;
-        cout << "5. Limpiar Productos" << endl;
-        cout << "6. Buscar Producto por Categoria" << endl;
-        cout << "7. Buscar Producto por Codigo" << endl;
-        cout << "8. Buscar Producto por Precio" << endl;
-        cout << "0. Volver al Menu" << endl;
-        cout << "Ingrese una opcion: ";
-        cin >> opc;
-        system("cls");
-        switch (opc){
-            case 1:
-                altaProducto();
-                break;
-            case 2:
-                bajaProducto();
-                break;
-            case 3:
-                modificarProducto();
-                break;
-            case 4:
-                listarProducto();
-                break;
-            case 5:
-                limpiarProducto();
-                break;
-            case 6:
-                buscarProductoCategoria();
-                break;
-            case 7:
-                buscarProductoCodigo();
-                break;
-            case 8:
-                buscarProductoPrecio();
-                break;
-            case 0:
-                return;
-            default:
-                cout << "Opcion incorrecta" << endl;
-               break;
+        switch(contProd){
+          case 0:
+            altaProducto();
+            break;
+          case 1:
+            bajaProducto();
+            break;
+          case 2:
+            modificarProducto();
+            break;
+          case 3:
+            listarProducto();
+            break;
+          case 4:
+            limpiarProducto();
+            break;
+          case 5:
+            buscarProductoCategoria();
+            break;
+          case 6:
+            buscarProductoCodigo();
+            break;
+         case 7:
+            buscarProductoPrecio();
+            break;
+          case 8:
+            return;
         }
-        system("pause");
+        break;
+
+    }
     }
 }
 
